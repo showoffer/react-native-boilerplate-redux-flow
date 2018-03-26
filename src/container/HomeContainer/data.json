@@ -1,1 +1,3 @@
-["React Native Starter Kit", "React Navigation", "NativeBase Easy Grid", "NativeBase", "CodePush", "Redux"]
+{
+  "url": "https://jsonplaceholder.typicode.com/posts"
+}

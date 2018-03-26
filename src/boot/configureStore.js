@@ -11,7 +11,8 @@ export default function configureStore(onCompletion: () => void): any {
     applyMiddleware(thunk),
     devTools({
       name: "nativestarterkit",
-      realtime: true
+      hostname: "localhost",
+      port: 5678
     })
   );
 

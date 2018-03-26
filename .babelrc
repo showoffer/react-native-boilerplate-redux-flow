@@ -2,6 +2,17 @@
   "presets": [
     "react-native"
   ],
+  "plugins": [
+    ["module-resolver", {
+      "cwd": "babelrc",
+      "root": ["./src"],
+      "alias": {
+        "@shared": "./src/shared",
+        "@container": "./src/container",
+        "@stories": "./src/stories"
+      }
+    }]
+  ],
   "env": {
     "development": {
       "plugins": [

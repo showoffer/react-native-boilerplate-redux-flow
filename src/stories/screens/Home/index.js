@@ -13,13 +13,17 @@ import {
   List,
   ListItem
 } from "native-base";
-
 import styles from "./styles";
+import FooterContainer from "@container/FooterContainer";
+
 export interface Props {
   navigation: any;
   list: any;
 }
-export interface State {}
+
+export interface State {
+}
+
 class Home extends React.Component<Props, State> {
   render() {
     return (
@@ -35,9 +39,9 @@ class Home extends React.Component<Props, State> {
             </Button>
           </Left>
           <Body>
-            <Title>Home</Title>
+          <Title>Home</Title>
           </Body>
-          <Right />
+          <Right/>
         </Header>
         <Content>
           <List>
@@ -46,14 +50,15 @@ class Home extends React.Component<Props, State> {
                 key={i}
                 onPress={() =>
                   this.props.navigation.navigate("BlankPage", {
-                    name: { item }
+                    name: { item: item.title }
                   })}
               >
-                <Text>{item}</Text>
+                <Text>{item.title}</Text>
               </ListItem>
             ))}
           </List>
         </Content>
+        <FooterContainer navigation={this.props.navigation}/>
       </Container>
     );
   }
